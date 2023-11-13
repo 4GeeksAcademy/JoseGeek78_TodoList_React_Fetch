@@ -10,18 +10,18 @@
 
 @media (max-width: 1200px) {
     #app {
-        width: 55%;
+        width: 65%;
     }
 
     #app button {
-        font-size: 1.5vw;
+        font-size: 1.8vw;
         width: 9vw;
     }
 }
 
 @media (max-width: 850px) {
     #app {
-        width: 75%;
+        width: 85%;
     }
 
     #app button {
@@ -58,7 +58,7 @@ body {
     font-family: Georgia, sans-serif;
     display: flex;
     flex-direction: column;
-    border: 1px solid var(--border-color);
+    border: 2px solid var(--border-color);
     width: 25%;
     min-height: 40vh;
     margin: 5% auto auto auto;
@@ -70,7 +70,7 @@ body {
     width: 100%;
     border: 0;
     background: var(--main-bg-color);
-    border-bottom: 1px solid var(--border-color);
+    border: 2px solid var(--border-color);
     outline: none;
     padding: 8px;
 }
@@ -91,9 +91,9 @@ body {
     background-color: var(--button-bg-color);
     color: #fff;
     cursor: pointer;
-    border: none;
+    border: 1px;
     outline: none;
-    margin-top: 8px;
+    margin-top: 4px;
 }
 
 #app button:hover {
