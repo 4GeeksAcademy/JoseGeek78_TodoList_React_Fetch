@@ -55,7 +55,7 @@ body {
 }
 
 #app {
-    font-family: 'Inconsolata', monospace;
+    font-family: Georgia, sans-serif;
     display: flex;
     flex-direction: column;
     border: 1px solid var(--border-color);
