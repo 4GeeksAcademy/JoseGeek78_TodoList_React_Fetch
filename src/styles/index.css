@@ -1,12 +1,113 @@
 
-/* 
+:root {
+    --main-bg-color: #f0f2f5;
+    --container-bg-color: #fff;
+    --border-color: #dfe3e8;
+    --button-bg-color: #1877f2;
+    --button-hover-color: #0a5ac4;
+}
 
-    You can write your own styles here...
-    
-    
-    ...Or you can use the import command to include 
-    other sylesheets into your bunde as well, e.j:
-    
-    import 'relative/path/to/stylesheet.scss';
 
-*/
+@media (max-width: 1200px) {
+    #app {
+        width: 55%;
+    }
+
+    #app button {
+        font-size: 1.5vw;
+        width: 9vw;
+    }
+}
+
+@media (max-width: 850px) {
+    #app {
+        width: 75%;
+    }
+
+    #app button {
+        font-size: 2.5vw;
+        width: 22vw;
+    }
+
+    #app i {
+        display: block;
+    }
+}
+
+@media (max-width: 500px) {
+    #app {
+        width: 85%;
+    }
+
+    #app button {
+        font-size: 3.5vw;
+        width: 32vw;
+    }
+
+    #app i {
+        display: block;
+    }
+}
+
+
+body {
+    background-color: var(--main-bg-color);
+}
+
+#app {
+    font-family: 'Inconsolata', monospace;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--border-color);
+    width: 25%;
+    min-height: 40vh;
+    margin: 5% auto auto auto;
+    padding: 1.5%;
+    background: var(--container-bg-color);
+}
+
+#app input {
+    width: 100%;
+    border: 0;
+    background: var(--main-bg-color);
+    border-bottom: 1px solid var(--border-color);
+    outline: none;
+    padding: 8px;
+}
+
+#app span {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+#app button {
+    width: 6vw;
+    align-self: end;
+    font-size: 1vw;
+    height: 3.5vh;
+    background-color: var(--button-bg-color);
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    margin-top: 8px;
+}
+
+#app button:hover {
+    background-color: var(--button-hover-color);
+}
+
+.todo {
+    background-color: #f9f9f9;
+    padding: 12px;
+    border-radius: 6px;
+    margin-top: 12px;
+}
+
+.todo input {
+    background-color: #fff;
+    margin-bottom: 6px;
+}

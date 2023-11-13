@@ -1,26 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 
-//include images into your bundle
-import rigoImage from "../../img/rigo-baby.jpg";
+const Todolist = (todo) => {
+	const [hidden, setHidden] = useState("d-none")
+	return <span onMouseOver={()=>{setHidden("")}} onMouseOut={()=>{setHidden("d-none")}}>
+        <p className="fs-3 m-0">{todo.text}</p>
+        <i onClick={todo.click} className={`fa-solid fa-x fs-6 text-danger ${hidden}`}></i>
+        </span>
+}
 
-//create your first component
-const Home = () => {
-	return (
-		<div className="text-center">
-			<h1 className="text-center mt-5">Hello Rigo!</h1>
-			<p>
-				<img src={rigoImage} />
-			</p>
-			<a href="#" className="btn btn-success">
-				If you see this green button... bootstrap is working...
-			</a>
-			<p>
-				Made by{" "}
-				<a href="http://www.4geeksacademy.com">4Geeks Academy</a>, with
-				love!
-			</p>
-		</div>
-	);
-};
-
-export default Home;
+export default Todolist;
