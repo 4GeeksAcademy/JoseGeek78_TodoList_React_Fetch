@@ -14,7 +14,7 @@
     }
 
     #app button {
-        font-size: 1.8vw;
+        font-size: 1.7vw;
         width: 9vw;
     }
 }
@@ -26,7 +26,7 @@
 
     #app button {
         font-size: 2.5vw;
-        width: 22vw;
+        width: 23vw;
     }
 
     #app i {
@@ -103,11 +103,11 @@ body {
 .todo {
     background-color: #f9f9f9;
     padding: 12px;
-    border-radius: 6px;
+    border-radius: 7px;
     margin-top: 12px;
 }
 
 .todo input {
     background-color: #fff;
-    margin-bottom: 6px;
+    margin-bottom: 5px;
 }
