@@ -11,7 +11,7 @@ const ToDo = () => {
                     console.error("Insert task to create user on API");
                     throw Error(response.statusText);
                 }
-                return response.json();
+             return response.json();
             })
             .then(responseAsJson => {
                 setTodos(responseAsJson);
@@ -22,7 +22,7 @@ const ToDo = () => {
         if (todos.length === 1) {
             fetch('https://playground.4geeks.com/apis/fake/todos/user/JoseGeek78', {
                 method: "DELETE"
-            })
+           })
                 .then(res => res.json())
                 .then(() => setTodos([]))
                 .catch(error => console.error(error));
