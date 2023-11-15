@@ -11,7 +11,7 @@ const ToDo = () => {
                     console.error("Insert task to create user on API");
                     throw Error(response.statusText);
                 }
-             return response.json();
+                return response.json();
             })
             .then(responseAsJson => {
                 setTodos(responseAsJson);
@@ -21,8 +21,10 @@ const ToDo = () => {
     const deleteTodo = (elm) => {
         if (todos.length === 1) {
             fetch('https://playground.4geeks.com/apis/fake/todos/user/JoseGeek78', {
-                method: "DELETE"
-           })
+                method: "PUT",
+                body: JSON.stringify([]),
+                headers: { 'Content-Type': 'application/json' }
+            })
                 .then(res => res.json())
                 .then(() => setTodos([]))
                 .catch(error => console.error(error));
@@ -42,7 +44,9 @@ const ToDo = () => {
 
     const deleteAll = () => {
         fetch('https://playground.4geeks.com/apis/fake/todos/user/JoseGeek78', {
-            method: "DELETE"
+            method: "PUT",
+            body: JSON.stringify([]),
+            headers: { 'Content-Type': 'application/json' }
         })
             .then(res => res.json())
             .then(() => setTodos([]))
