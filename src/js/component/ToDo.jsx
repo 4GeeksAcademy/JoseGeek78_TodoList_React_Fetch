@@ -18,28 +18,19 @@ const ToDo = () => {
             });
     }, []);
 
-    const deleteTodo = (elm) => {
-        if (todos.length === 1) {
-            fetch('https://playground.4geeks.com/apis/fake/todos/user/JoseGeek78', {
-                method: "PUT",
-                body: JSON.stringify([]),
-                headers: { 'Content-Type': 'application/json' }
-            })
-                .then(res => res.json())
-                .then(() => setTodos([]))
-                .catch(error => console.error(error));
-        }
+    const markAsCompleted = (elm) => {
+        const updatedTodos = todos.map((todo) =>
+            todo.id === elm.id ? { ...todo, done: true } : todo
+        );
 
-        if (todos.length > 1) {
-            fetch('https://playground.4geeks.com/apis/fake/todos/user/JoseGeek78', {
-                method: "PUT",
-                body: JSON.stringify(todos.filter(itm => itm.id !== elm.id)),
-                headers: { 'Content-Type': 'application/json' }
-            })
-                .then(res => res.json())
-                .then(() => setTodos(todos.filter(itm => itm.id !== elm.id)))
-                .catch(error => console.error(error));
-        }
+        fetch('https://playground.4geeks.com/apis/fake/todos/user/JoseGeek78', {
+            method: "PUT",
+            body: JSON.stringify(updatedTodos),
+            headers: { 'Content-Type': 'application/json' }
+        })
+            .then(res => res.json())
+            .then(() => setTodos(updatedTodos))
+            .catch(error => console.error(error));
     };
 
     const deleteAll = () => {
@@ -50,6 +41,19 @@ const ToDo = () => {
         })
             .then(res => res.json())
             .then(() => setTodos([]))
+            .catch(error => console.error(error));
+    };
+
+    const deleteCompleted = () => {
+        const updatedTodos = todos.filter((todo) => !todo.done);
+
+        fetch('https://playground.4geeks.com/apis/fake/todos/user/JoseGeek78', {
+            method: "PUT",
+            body: JSON.stringify(updatedTodos),
+            headers: { 'Content-Type': 'application/json' }
+        })
+            .then(res => res.json())
+            .then(() => setTodos(updatedTodos))
             .catch(error => console.error(error));
     };
 
@@ -73,12 +77,13 @@ const ToDo = () => {
 
     return (
         <>
-            <button onClick={deleteAll}>Borrar</button>
+            <button onClick={deleteAll} style={{ backgroundColor: 'green', color: '#fff' }}>Borrar</button>
+            <button onClick={deleteCompleted}>Eliminar Completadas</button>
             <h1 className="d-flex justify-content-center">Tareas</h1>
             <div className="todo">
                 <input placeholder="Añadir Tarea..." onKeyDown={(e) => insertTodo(e)} />
                 {todos.map((todo) => (
-                    <TodoElement key={todo.id} text={todo.label} click={() => deleteTodo(todo)} />
+                    <TodoElement key={todo.id} text={todo.label} click={() => markAsCompleted(todo)} />
                 ))}
             </div>
         </>
