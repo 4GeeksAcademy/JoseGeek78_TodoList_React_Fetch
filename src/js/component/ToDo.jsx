@@ -78,7 +78,7 @@ const ToDo = () => {
     return (
         <>
             <button onClick={deleteAll} style={{ backgroundColor: 'green', color: '#fff' }}>Borrar</button>
-            <button onClick={deleteCompleted}>Eliminar Completadas</button>
+            <button onClick={deleteCompleted}>Completada</button>
             <h1 className="d-flex justify-content-center">Tareas</h1>
             <div className="todo">
                 <input placeholder="Añadir Tarea..." onKeyDown={(e) => insertTodo(e)} />
