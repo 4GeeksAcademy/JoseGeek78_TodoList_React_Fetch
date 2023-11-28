@@ -1,113 +1,110 @@
-
 :root {
-    --main-bg-color: #f0f2f5;
-    --container-bg-color: #fff;
-    --border-color: #dfe3e8;
-    --button-bg-color: #1877f2;
-    --button-hover-color: #0a5ac4;
+  --main-bg-color: #f0f2f5;
+  --container-bg-color: #fff;
+  --border-color: #dfe3e8;
+  --button-bg-color: #1877f2;
+  --button-hover-color: #0a5ac4;
 }
 
-
 @media (max-width: 1200px) {
-    #app {
-        width: 65%;
-    }
+  #app {
+    width: 65%;
+  }
 
-    #app button {
-        font-size: 1.7vw;
-        width: 9vw;
-    }
+  #app button {
+    font-size: 1.7vw;
+    width: 9vw;
+  }
 }
 
 @media (max-width: 850px) {
-    #app {
-        width: 85%;
-    }
+  #app {
+    width: 85%;
+  }
 
-    #app button {
-        font-size: 2.5vw;
-        width: 23vw;
-    }
+  #app button {
+    font-size: 2.5vw;
+    width: 23vw;
+  }
 
-    #app i {
-        display: block;
-    }
+  #app i {
+    display: block;
+  }
 }
 
 @media (max-width: 500px) {
-    #app {
-        width: 85%;
-    }
+  #app {
+    width: 85%;
+  }
 
-    #app button {
-        font-size: 3.5vw;
-        width: 32vw;
-    }
+  #app button {
+    font-size: 3.5vw;
+    width: 32vw;
+  }
 
-    #app i {
-        display: block;
-    }
+  #app i {
+    display: block;
+  }
 }
 
-
 body {
-    background-color: var(--main-bg-color);
+  background-color: var(--main-bg-color);
 }
 
 #app {
-    font-family: Georgia, sans-serif;
-    display: flex;
-    flex-direction: column;
-    border: 2px solid var(--border-color);
-    width: 25%;
-    min-height: 40vh;
-    margin: 5% auto auto auto;
-    padding: 1.5%;
-    background: var(--container-bg-color);
+  font-family: Georgia, sans-serif;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid var(--border-color);
+  width: 25%;
+  min-height: 40vh;
+  margin: 5% auto auto auto;
+  padding: 1.5%;
+  background: var(--container-bg-color);
 }
 
 #app input {
-    width: 100%;
-    border: 0;
-    background: var(--main-bg-color);
-    border: 2px solid var(--border-color);
-    outline: none;
-    padding: 8px;
+  width: 100%;
+  border: 0;
+  background: var(--main-bg-color);
+  border: 2px solid var(--border-color);
+  outline: none;
+  padding: 8px;
 }
 
 #app span {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border: 0;
-    border-bottom: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 0;
+  border-bottom: 1px solid var(--border-color);
 }
 
 #app button {
-    width: 6vw;
-    align-self: end;
-    font-size: 1vw;
-    height: 3.5vh;
-    background-color: var(--button-bg-color);
-    color: #fff;
-    cursor: pointer;
-    border: 1px;
-    outline: none;
-    margin-top: 4px;
+  width: 6vw;
+  align-self: end;
+  font-size: 1vw;
+  height: 3.5vh;
+  background-color: var(--button-bg-color);
+  color: #fff;
+  cursor: pointer;
+  border: 1px;
+  outline: none;
+  margin-top: 4px;
 }
 
 #app button:hover {
-    background-color: var(--button-hover-color);
+  background-color: var(--button-hover-color);
 }
 
 .todo {
-    background-color: #f9f9f9;
-    padding: 12px;
-    border-radius: 7px;
-    margin-top: 12px;
+  background-color: #f9f9f9;
+  padding: 12px;
+  border-radius: 7px;
+  margin-top: 12px;
 }
 
 .todo input {
-    background-color: #fff;
-    margin-bottom: 5px;
+  background-color: #fff;
+  margin-bottom: 5px;
 }
